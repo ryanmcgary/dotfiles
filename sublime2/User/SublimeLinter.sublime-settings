@@ -1,0 +1,51 @@
+{
+  "sublimelinter": "load-save",
+  "sublimelinter_popup_errors_on_save": true,
+
+  // these settings are actually specific to gw (chrome, fx, ie9+) with
+  // box-sizing on
+  "csslint_options":
+  {
+    "adjoining-classes": false,
+    "box-model": false,
+    "box-sizing": false,
+    "compatible-vendor-prefixes": "warning",
+    "display-property-grouping": true,
+    "duplicate-background-images": "warning",
+    "duplicate-properties": true,
+    "empty-rules": true,
+    "errors": true,
+    "fallback-colors": false,
+    "floats": "warning",
+    "font-faces": "warning",
+    "font-sizes": "warning",
+    "gradients": "warning",
+    "ids": false,
+    "import": "warning",
+    "important": "warning",
+    "known-properties": true,
+    "outline-none": "warning",
+    "overqualified-elements": false,
+    "qualified-headings": "warning",
+    "regex-selectors": "warning",
+    "rules-count": "warning",
+    "shorthand": "warning",
+    "text-indent": "warning",
+    "unique-headings": "warning",
+    "universal-selector": "warning",
+    "vendor-prefix": true,
+    "zero-units": "warning"
+  },
+
+  "jshint_options":
+  {
+    "indent": 1,
+    "evil": true,
+    "regexdash": true,
+    "browser": true,
+    "wsh": true,
+    "trailing": true,
+    "sub": true,
+    "loopfunc": true
+  }
+}
