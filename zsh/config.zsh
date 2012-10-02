@@ -39,10 +39,14 @@ setopt complete_aliases
 
 zle -N newtab
 
-bindkey '^[^[[D' backward-word
-bindkey '^[^[[C' forward-word
-bindkey '^[[5D' beginning-of-line
-bindkey '^[[5C' end-of-line
-bindkey '^[[3~' delete-char
-bindkey '^[^N' newtab
-bindkey '^?' backward-delete-char
+bindkey -v
+bindkey -M viins 'kj' vi-cmd-mode
+
+# to differentiate between vi modes:
+#function zle-line-init zle-keymap-select {
+    #RPS1="${${KEYMAP/vicmd/-- NORMAL --}/(main|viins)/-- INSERT --}"
+    #RPS2=$RPS1
+    #zle reset-prompt
+#}
+#zle -N zle-line-init
+#zle -N zle-keymap-select
