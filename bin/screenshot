@@ -2,12 +2,13 @@
 
 require 'open3'
 require 'pathname'
+require 'SecureRandom'
 require 'tmpdir'
 
 require 'rubygems'
 require 'aws-sdk'
 
-path = Pathname.new(Dir.tmpdir) + "#{(0..33).map{97.+(rand(25)).chr}.join}.png"
+path = Pathname.new(Dir.tmpdir) + "#{SecureRandom.hex}.png"
 
 system "screencapture -i \"#{path}\""
 exit unless File.exists?(path)
