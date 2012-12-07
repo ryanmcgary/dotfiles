@@ -24,7 +24,7 @@ begin
 
   bucket = s3.buckets[ENV['S3_SCREENSHOT_BUCKET']]
   object = bucket.objects[path.basename]
-  Open3.popen3('pbcopy'){ |input, _, _| input << object.public_url }
+  Open3.popen3('/usr/bin/pbcopy'){ |input, _, _| input << object.public_url }
   object.write(path, :acl => :public_read, :content_type => "image/png")
 ensure
   File.unlink(path)
